@@ -1,0 +1,41 @@
+type Message {
+  id: ID!
+  sender: User!
+  receiver: User!
+  message: String!
+  createdAt: String!
+  isRead: Boolean!
+}
+
+input CreateMessageInput{
+    sender: String!
+    receiver: String!
+    message: String!
+}
+
+input UpdateMessageInput{
+    message: String
+    isRead: Boolean
+}
+
+type DeleteAllOutput{
+    count:Int!
+}
+
+type Query{
+    messages(sender: String, receiver: String):[Message!]!
+    message:Message!
+}
+
+type Mutation{
+    createMessage(data:CreateMessageInput!): Message!
+    updateMessage(id:ID!, data: UpdateMessageInput!): Message!
+    deleteMessage(id:ID!): Message!
+    deleteAllMessage: DeleteAllOutput!
+}
+
+type Subscription {
+    messageCreated(sender:String,receiver:String): Message!
+    messageUpdated: Message!
+    messageDeleted: Message!
+}

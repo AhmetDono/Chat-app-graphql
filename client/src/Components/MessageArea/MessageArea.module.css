@@ -1,0 +1,18 @@
+.messageInput {
+    padding: 10px;
+    margin: 0;
+    background-color: #151B1F;
+    position: sticky;
+    bottom: 0; /* Mesaj gönderme kısmını ekranın altına sabitler */
+    z-index: 1;
+  }
+  
+  .messageInput textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+  }

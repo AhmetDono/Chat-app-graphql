@@ -1,0 +1,38 @@
+type User{
+    id:ID!
+    name:String!
+    profilePicture:String!
+    messages:[Message]
+}
+
+input CreateUserInput{
+    name:String!
+    profilePicture:String!
+}
+
+input UpdateUserInput{
+    name:String
+    profilePicture:String
+}
+
+type DeleteAllOutput{
+    count:Int!
+}
+
+type Query{
+    users:[User!]!
+    user(id:ID):User!
+}
+
+type Mutation{
+    createUser(data:CreateUserInput!): User
+    updateUser(id:ID!, data: UpdateUserInput!): User!
+    deleteUser(id:ID!): User!
+    deleteAllUser: DeleteAllOutput!
+}
+
+type Subscription {
+    userCreated: User!
+    userUpdated: User!
+    userDeleted: User!
+}

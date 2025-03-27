@@ -1,0 +1,12 @@
+.loginContainer{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.userSelectContainer{
+    margin: 30vh;
+    padding: 0;
+}

@@ -1,0 +1,59 @@
+.chatBarContainer {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: #212b30;
+    display: flex;
+    flex-direction: column; /* Stack user containers vertically */
+    flex-wrap: nowrap;
+  }
+  
+  .userContainer {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    width: 100%;
+    background-color: #0e1214;
+    height: 80px; /* Consistent height for each user container */
+    border-bottom: 1px solid rgb(83, 83, 83);
+  }
+  
+  .userContainer:hover {
+    background-color: #151B1F;
+  }
+  
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imageContainer img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+  }
+  
+  .userInfoContainer {
+    padding: 10px 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .messageNotificationContainer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .messageNotificationContainer span {
+    background-color: #0b5b24;
+    color: white;
+    border-radius: 100px;
+  }
+  
